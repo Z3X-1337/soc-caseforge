@@ -1,5 +1,10 @@
 # SOC CaseForge
 
+[![tests](https://github.com/Z3X-1337/soc-caseforge/actions/workflows/tests.yml/badge.svg)](https://github.com/Z3X-1337/soc-caseforge/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3.10--3.12-blue)
+![Version](https://img.shields.io/badge/version-0.1.0-informational)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 SOC CaseForge is a local-first Python workspace for turning sanitized analyst evidence into a structured incident case. It stores cases in SQLite, parses supported OpenSSH authentication events, extracts common indicators, applies deterministic detection heuristics, and renders Markdown or JSON reports.
 
 It is designed as a portfolio-grade SOC workflow and an early product foundation. It is not a SIEM, EDR, malware sandbox, or autonomous analyst.
@@ -72,15 +77,23 @@ soc-caseforge --db demo.db demo
 
 ## Validation
 
+The repository contains **24 parser, indicator, storage, analysis, reporting, package-resource, and CLI tests**. GitHub Actions installs the package, runs the complete suite, and verifies the installed console command on Python 3.10, 3.11, and 3.12.
+
 ```bash
 python -m unittest discover -s tests -v
 python -m pip install .
 soc-caseforge --help
 ```
 
-## Architecture
+## Architecture and governance
 
-See [docs/architecture.md](docs/architecture.md) and [docs/threat-model.md](docs/threat-model.md).
+- [Architecture](docs/architecture.md)
+- [Threat model](docs/threat-model.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Security policy](SECURITY.md)
+- [Contributing](CONTRIBUTING.md)
+- [MIT License](LICENSE)
 
 ## Safety and limitations
 
