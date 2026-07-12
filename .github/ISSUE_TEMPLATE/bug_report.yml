@@ -1,0 +1,71 @@
+name: Bug report
+description: Report reproducible behavior using sanitized evidence only
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include production logs, credentials, tokens, customer data, or internal infrastructure details. Replace sensitive values with documentation-safe examples.
+  - type: input
+    id: version
+    attributes:
+      label: SOC CaseForge version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - CLI
+        - OpenSSH parser
+        - IOC extraction
+        - SQLite storage
+        - Detection analysis
+        - Markdown report
+        - JSON report
+        - Packaging or installation
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: State what happened and include the exact sanitized error message or output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Include the command and the smallest sanitized input needed to reproduce the issue.
+      placeholder: |
+        1. Install with ...
+        2. Run ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version and operating system
+      placeholder: Python 3.12.4 on Ubuntu 24.04
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety confirmation
+      options:
+        - label: I removed credentials, tokens, private addresses, customer data, and other sensitive evidence.
+          required: true
