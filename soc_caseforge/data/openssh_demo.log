@@ -1,0 +1,6 @@
+Jul 12 08:00:01 lab sshd[1001]: Failed password for invalid user admin from 203.0.113.10 port 50100 ssh2
+Jul 12 08:00:05 lab sshd[1002]: Failed password for root from 203.0.113.10 port 50101 ssh2
+Jul 12 08:00:10 lab sshd[1003]: Failed publickey for analyst from 203.0.113.10 port 50102 ssh2
+Jul 12 08:00:15 lab sshd[1004]: Failed password for analyst from 203.0.113.10 port 50103 ssh2
+Jul 12 08:00:20 lab sshd[1005]: Accepted password for analyst from 203.0.113.10 port 50104 ssh2
+Jul 12 08:01:00 lab sshd[1006]: Accepted publickey for backup from 198.51.100.25 port 50500 ssh2
