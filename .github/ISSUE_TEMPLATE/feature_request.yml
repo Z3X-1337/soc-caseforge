@@ -1,0 +1,53 @@
+name: Feature request
+description: Propose a scoped improvement to the analyst workflow
+title: "enhancement: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Analyst problem
+      description: Describe the investigation or reporting problem, not only the proposed implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Current workflow
+      description: Explain how an analyst handles the problem today and where friction or risk occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Define inputs, outputs, and the smallest useful scope.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and explainability requirements
+      description: State what evidence, confidence, limitations, or analyst decisions the feature must preserve.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Existing data remains readable
+        - [ ] Tests cover the new behavior
+        - [ ] Documentation states limitations
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Product boundaries
+      options:
+        - label: The proposal keeps evidence local by default or clearly documents any new trust boundary.
+          required: true
+        - label: The proposal does not claim attribution or malicious intent without analyst validation.
+          required: true
